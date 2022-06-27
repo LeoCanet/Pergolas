@@ -6,20 +6,21 @@ require("dotenv").config();
 const db = require("./db");
 const cors = require("cors");
 
-var corsOptions = {
-  origin: "http://localhost:4200",
-};
+// var corsOptions = {
+//   origin: "http://localhost:4200",
+// };
 
-app.use(cors(corsOptions));
-app.use(bodyparser.json());
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
+// app.use(cors(corsOptions));
+// app.use(bodyparser.json());
+// app.use(
+//   express.urlencoded({
+//     extended: true,
+//   })
+// );
 
 const PergolasRoute = require("./pergolas/pergolas.routes");
-app.use("/pergolas", PergolasRoute);
+app.use("/pergolas", PergolasRoute )
+
 
 const hostname = "127.0.0.1";
 const port = 4002;
